@@ -1,0 +1,111 @@
+@font-face{
+	font-family:"YenRound-Medium";
+	src:url('YenRound-Medium.woff')format('woff');
+} 
+html,body{
+	font-family:YenRound-Medium;
+	text-align:center;
+	height:100%;
+	background-color:lightblue;
+	overflow:hidden;
+}
+hr{
+	margin:0;
+	border-width:2px;
+}
+.tooltip{
+	font-size:1.5em;
+	padding:6px 10px;
+	text-align:center;
+	position:absolute;
+	border:3px;
+	border-radius:100px;
+	border-color:black;
+	border-style:solid;
+	background-color:white;
+}
+.tooltip:hidden{
+	display:hidden;
+}
+.selection{
+	position:absolute;
+	width:150px;
+	height:195px;
+	background-color:#DDDDDD;
+	outline:3px solid black;
+	border-radius:10px;
+	cursor:pointer;
+}
+.selection a{
+	width:100%;
+	font-weight:bold;
+	font-size:1.2em;
+	display:inline-block;
+	line-height:30px;
+	padding:auto;
+}
+.selection a:hover{
+	background-color:white;
+}
+svg{
+	margin:auto auto auto auto;
+	width:100%;
+	height:100%;
+	display:block;
+}
+path{
+	fill:white;
+}
+path:hover{
+	fill:lightgray;
+	cursor:pointer;
+}
+.menu{
+	position:fixed;
+	width:450px;
+	height:300px;
+	bottom:10px;
+	background-color:#DDDDDD;
+	outline:5px solid black;
+}
+.rule{
+	font-weight:bold;
+	font-size:1.5em;
+	width:350px;
+	margin:auto auto auto auto;
+}
+.rule a{
+	width:45%;
+	display:inline-block;
+	margin-bottom:2px;
+}
+.lv5{
+	color:red;
+	fill:pink;
+}
+.lv4{
+	color:orange;
+	fill:orange;
+}
+.lv3{
+	color:yellow;
+	fill:yellow;
+}
+.lv2{
+	color:green;
+	fill:lightgreen;
+}
+.lv1{
+	color:blue;
+	fill:skyblue;
+}
+.lv0{
+	color:black;
+	fill:white;
+}
+.left{
+	text-align:left;
+}
+.right{
+	text-align:right;
+}
