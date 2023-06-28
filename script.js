@@ -32,6 +32,7 @@ function rLocate(){
 		offset=-160;
 	}
 	else offset=110;
+	if(ypos<0)ypos=0;
 	document.getElementById("tooltip").setAttribute("style","left:"+xpos+"px;top:"+ypos+"px;");
 }
 function locate(event){
@@ -65,11 +66,11 @@ function onClick(obj){
 	onHover(obj);
 	click=2;
 	wxpos=xpos+offset;
+	if(ypos>750)ypos=750;
 	document.getElementById("selection").setAttribute("style","left:"+wxpos+"px;top:"+ypos+"px;");
 	document.getElementById("selection").removeAttribute("hidden");
 }
 window.addEventListener("click",function(e){
-	console.log(click);
 	if(click==2)click--;
 	else if(click){
 		if(document.getElementById("selection").contains(e.target))offClick();
