@@ -1,5 +1,4 @@
-document.onmousemove=locate;
-var xpos,ypos,wxpos,click=0,score;
+var xpos,ypos,wxpos,click=0,score,offset;
 var element;
 var county=new Map([
 	["new_taipei",0],
@@ -25,9 +24,14 @@ var county=new Map([
 	["kinmen",0],
 	["lienchiang",0],
 ]);
+document.onmousemove=locate;
 function rLocate(){
 	xpos=event.clientX-50;
 	ypos=event.clientY-70;
+	if(xpos>715){
+		offset=-160;
+	}
+	else offset=110;
 	document.getElementById("tooltip").setAttribute("style","left:"+xpos+"px;top:"+ypos+"px;");
 }
 function locate(event){
@@ -60,7 +64,7 @@ function onClick(obj){
 	}
 	onHover(obj);
 	click=2;
-	wxpos=xpos+110;
+	wxpos=xpos+offset;
 	document.getElementById("selection").setAttribute("style","left:"+wxpos+"px;top:"+ypos+"px;");
 	document.getElementById("selection").removeAttribute("hidden");
 }
