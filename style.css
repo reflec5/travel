@@ -81,11 +81,11 @@ path:hover{
 }
 .lv5{
 	color:red;
-	fill:pink;
+	fill:salmon;
 }
 .lv4{
 	color:orange;
-	fill:orange;
+	fill:rgb(255,192,74);
 }
 .lv3{
 	color:yellow;
